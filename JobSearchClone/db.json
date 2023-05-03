@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Satış məsləhətçisi (Elektronika –Masallı, Beyləqan)",
+      "company": "ELIT.EO",
+      "category": "Maliyyə xidmətləri",
+      "numberOfJob": "156 iş elanı",
+      "seen": "165",
+      "date": "02 MAY",
+      "requirements": [
+        "Təhsil: Ali və ya orta;",
+        "Azərbaycan dilini səlis  bilməli, rus və ya ingilis dillərindən birində özünü ifadə etməyi bacarmalıdır;",
+        "Satış təcrübəsi arzu olunandır;",
+        "Aktiv, çevik, ünsiyyətcil və məsuliyyətli olmalı;",
+        "Satış qabiliyyəti olmalı; Məhsulları təqdim etmək bacarığına malik olmaq."
+      ],
+      "description": "“Elit Optimal “ -  is a subsidiary of “Elit Electronics”, the largest electronics retailer in the Georgian market. “Elit Electronics” is a subsidiary of “Brimag Digital Age”, that is operated  in Israeli market and listed at Tel Aviv Stock Exchange.",
+      "duty": [
+        "Mağazada yüksək keyfiyyətli müştəri xidmətini həyata keçirmək;",
+        "Şirkətin satdığı məhsulların satışı həyata keçirmək;",
+        "Müştərinin seçimi üçün optimal şərait yaratmaq;",
+        "Mövcud müştərilər ilə əlaqələri gücləndirmək, yeni müştərilər qazanmaq;"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Front-end Developer",
+      "company": "İT Academy",
+      "category": "Komputerləşmə və İKT",
+      "numberOfJob": "12 iş elanı",
+      "seen": "165",
+      "date": "02 MAY",
+      "requirements": [
+        "Təhsil: Ali və ya orta;",
+        "Aydın və test oluna bilən kodlar yazmaq;",
+        "Sistemlə bağlı tələbləri müəyyənləşdirmək;",
+        "Aktiv, çevik, ünsiyyətcil və məsuliyyətli olmalı;",
+        "Satış qabiliyyəti olmalı; Məhsulları təqdim etmək bacarığına malik olmaq."
+      ],
+      "description": "“Elit Optimal “ -  is a subsidiary of “Elit Electronics”, the largest electronics retailer in the Georgian market. “Elit Electronics” is a subsidiary of “Brimag Digital Age”, that is operated  in Israeli market and listed at Tel Aviv Stock Exchange.",
+      "duty": [
+        "Mağazada yüksək keyfiyyətli müştəri xidmətini həyata keçirmək;",
+        "Şirkətin satdığı məhsulların satışı həyata keçirmək;",
+        "Müştərinin seçimi üçün optimal şərait yaratmaq;",
+        "Mövcud müştərilər ilə əlaqələri gücləndirmək, yeni müştərilər qazanmaq;"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Xadimə",
+      "company": "Bulaq kompleksi",
+      "category": "Otel, iaşə, turizm",
+      "numberOfJob": "156 iş elanı",
+      "seen": "135",
+      "date": "02 MAY",
+      "requirements": [
+        "Səliqəli və təmiliyinə fikir verən namizədlərərə üstünluk verilir.       ",
+        "Azərbaycan dilini səlis  bilməli, rus və ya ingilis dillərindən birində özünü ifadə etməyi bacarmalıdır;",
+        "Müəyyən edilmiş qaydalara əsasən, gündəlik olaraq ümumi təmizlik və sanitariya işlərini yerinə yetirmək.          ;",
+        "Aktiv, çevik, ünsiyyətcil və məsuliyyətli olmalı;",
+        "Satış qabiliyyəti olmalı; Məhsulları təqdim etmək bacarığına malik olmaq."
+      ],
+      "description": "“Elit Optimal “ -  is a subsidiary of “Elit Electronics”, the largest electronics retailer in the Georgian market. “Elit Electronics” is a subsidiary of “Brimag Digital Age”, that is operated  in Israeli market and listed at Tel Aviv Stock Exchange.",
+      "duty": [
+        "Mağazada yüksək keyfiyyətli müştəri xidmətini həyata keçirmək;",
+        "Şirkətin satdığı məhsulların satışı həyata keçirmək;",
+        "Müştərinin seçimi üçün optimal şərait yaratmaq;",
+        "Mövcud müştərilər ilə əlaqələri gücləndirmək, yeni müştərilər qazanmaq;"
+      ]
+    }
+  ]
+}

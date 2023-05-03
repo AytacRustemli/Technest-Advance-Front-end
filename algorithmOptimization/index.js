@@ -72,4 +72,4 @@ function findFirstNonRepeatedChar(str) {
     return null;
 }
 
-console.log(findFirstNonRepeatedChar([1,2,3,4,3,1,2]));
+console.log(findFirstNonRepeatedChar([1, 2, 3, 4, 3, 1, 2]));
