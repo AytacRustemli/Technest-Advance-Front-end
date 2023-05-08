@@ -100,15 +100,6 @@ const addFive = add(5);
 console.log(addFive());
 console.log(addFive());
 
-// Array.prototype.getArea = function() {
-//   for (let i = 0; i < this.length; i++) {
-//     return this[i] * this[i+1];
-//     // console.log(this[i]);
-//   }
-// }
-
-// const ary = [4,5]
-// console.log(ary.getArea());
 
 
 function Rectangle(width, height) {
