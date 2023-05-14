@@ -12,12 +12,14 @@ const Weather = () => {
       .then((response) => response.json())
       .then((data) => {
         setWeatherData(data.forecast.forecastday[0].hour);
-        setLoading(false);
+        
       })
       .catch((error) => {
         console.error("Error fetching weather data: ", error);
+      })
+      .finally(() =>{
         setLoading(false);
-      });
+      })
   }, []);
 
   return (
@@ -35,7 +37,8 @@ const Weather = () => {
                 <p style={{ marginLeft: "20px" }}>Temperature: {hour.temp_c}°C</p>
               </Grid>
             ))}
-          </Grid></div>
+          </Grid>
+        </div>
       )}
     </>
   );

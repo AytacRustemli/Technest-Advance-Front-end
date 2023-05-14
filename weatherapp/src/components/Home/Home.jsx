@@ -4,7 +4,7 @@ import { BASE_URL } from '../../api/config';
 
 const Home = () => {
   const [weather, setWeather] = useState({});
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const [currentDate] = useState(new Date());
 
   const getWeather = async () => {
     await fetch(BASE_URL)
