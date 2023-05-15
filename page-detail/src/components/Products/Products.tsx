@@ -1,41 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { useGetProductsQuery } from 'src/redux/store';
+import {Product} from '../../Interface/Product'
 
-interface Product {
-  id: string;
-  image: string;
-  title: string;
-  description: string;
-}
 
 const Products: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [visibleProducts, setVisibleProducts] = useState<Product[]>([]);
-
+  const { data: products, isLoading, isError } = useGetProductsQuery();
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-        setVisibleProducts(data.slice(0, 6));
-      });
-  }, []);
-
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const { scrollTop, clientHeight, offsetHeight } = e.currentTarget;
-    if (scrollTop + clientHeight === offsetHeight) {
-      const startIndex = visibleProducts.length;
-      const endIndex = startIndex + 6;
-      setVisibleProducts([...visibleProducts, ...products.slice(startIndex, endIndex)]);
+    if (isError) {
+      console.log('Error occurred while fetching products.');
     }
-  };
+  }, [isError]);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   
   return (
-    <div onScroll={handleScroll} style={{ height: "620px", overflow: "auto" }}>
+    <div id='products'>
       <div className="container">
         <div className="row">
-          {visibleProducts.map((product) => (
+          {products.map((product : Product) => (
             <div className="col-lg-4 my-3" key={product.id}>
               <Card sx={{ maxWidth: 320 }}>
                 <CardActionArea className='card-body'>

@@ -1,50 +1,53 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
-interface Product {
-  title: string;
-  price: number;
-  description: string;
-  image: string;
-  category: string;
-}
+import { useGetProductByIdQuery } from 'src/redux/store';
+import { CircularProgress, Container, Grid, Typography } from '@mui/material';
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const [detail, setDetail] = useState<Product | null>(null);
 
-  const getDetail = async () => {
-    fetch("https://fakestoreapi.com/products/" + id)
-      .then(res => res.json())
-      .then(respons => setDetail(respons))
-  }
+  const { data: detail, isLoading, isError } = useGetProductByIdQuery(id);
 
   useEffect(() => {
-    getDetail();
-  },)
+    if (!isLoading && !isError && detail) {
+      console.log(detail);
+    }
+  }, [detail, isLoading, isError]);
+
+  if (isLoading) {
+    return <CircularProgress />;
+  }
+
+  if (isError) {
+    return <div>Error occurred while fetching product details.</div>;
+  }
 
   return (
-    <div className='container my-5'>
-      <div className="row">
-        <div className="col-lg-6">
-          {
-            detail && <img className='img-fluid' style={{ height: 400 }} src={detail.image} alt={detail.title} />
-          }
-        </div>
-        <div className="col-lg-6">
-          {
-            detail && (
-              <>
-                <h3>Məhsulun adı : {detail.title}</h3>
-                <p><b>Məhsulun təsviri :</b> {detail.description}</p>
-                <p><b>Məhsulun qiyməti :</b> {detail.price}</p>
-              </>
-            )
-          }
-        </div>
-      </div>
-    </div>
-  )
-}
+    <Container maxWidth="md" sx={{ my: 5 }}>
+      <Grid container spacing={4}>
+        <Grid item xs={12} sm={6}>
+          {detail && (
+            <img src={detail.image} alt={detail.title} style={{ height: 400, width: '100%' }} />
+          )}
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          {detail && (
+            <>
+              <Typography variant="h4" gutterBottom>
+                Məhsulun adı: {detail.title}
+              </Typography>
+              <Typography variant="body1">
+                <b>Məhsulun təsviri:</b> {detail.description}
+              </Typography>
+              <Typography variant="body1">
+                <b>Məhsulun qiyməti:</b> {detail.price}
+              </Typography>
+            </>
+          )}
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
 
-export default ProductDetail
+export default ProductDetail;
